@@ -63,6 +63,7 @@ body {
 
 .calc {
   color: var(--screen-text);
+  font-size: 32px;
 }
 
 
