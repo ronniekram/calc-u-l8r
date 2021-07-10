@@ -53,24 +53,26 @@ body {
 }
 
 .header {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-content: end;
   justify-content: space-between;
 }
 
 .calc {
   color: var(--screen-text);
-  font-size: 32px;
+  font-size: 1.25rem;
 }
 
+.toggle {
+  align-self: center;
+}
 
 .switch {
   position: relative;
   display: inline-flex;
-  align-items: center;
   width: 3rem;
   height: 1rem;
 }
@@ -124,10 +126,9 @@ input:checked + .slider:before {
 .screen {
   display: flex;
   background-color: var(--screen);
-  height: 4rem;
+  height: 5rem;
   padding: .4rem;
-  margin-top: .25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: .5rem;
   color: var(--screen-text);
   align-items: center;
@@ -141,7 +142,7 @@ input:checked + .slider:before {
   padding: .75rem;
   border: none;
   font-family: 'Spartan';
-  font-size: 30px;
+  font-size: 32px;
   text-align: right;
 }
 
@@ -164,9 +165,9 @@ input:checked + .slider:before {
 }
 
 button {
-  width: 3.75rem;
-  height: 4rem;
-  margin: 0 .5rem;
+  width: 25%;
+  height: 3.5rem;
+  margin: .25rem .35rem;
   background-color: var(--key-3);
   padding: .3rem;
   border: none;
@@ -185,8 +186,8 @@ button {
 }
 
 #reset {
-  width: 46%;
-  height: 3.5rem;
+  width: 50%;
+  height: 3.25rem;
   background-color: var(--key-1);
   box-shadow: inset 0 -4px 0 0 var(--key-1-shadow);
   color: white;
@@ -194,8 +195,8 @@ button {
 }
 
 #equal {
-  width: 46%;
-  height: 3.5rem;
+  width: 50%;
+  height: 3.25rem;
   background-color: var(--key-2);
   box-shadow: inset 0 -4px 0 0 var(--key-2-shadow);
   color: white;
@@ -205,17 +206,18 @@ button {
 
 @media screen and (min-width: 1024px) {
   .container {
-    width: 
-    35%;
+    width: 35%;
+  }
+  .header {
+    margin-top: 3rem;
   }
   button {
-    width: 5rem;
-    height: 3rem;
     border-radius: .75rem;
   }
 }
 
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 375px) {
   .container {
     width: 98%;
   }
@@ -225,21 +227,10 @@ button {
   }
 
   button {
-    width: 3.5rem;
-    height: 3rem;
-    font-size: 18px;
-    margin: none;
+    width: 22%;
+    margin: .1rem;
   }
-
-  #delete {
-    font-size: 16px;
-  }
-
-  #reset {
-    font-size: 16px;
-  }
-
-  #equal {
-    font-size: 16px;
+  #equal, #reset {
+    width: 47%;
   }
 }
